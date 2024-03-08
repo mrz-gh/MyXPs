@@ -1,15 +1,40 @@
 # MyWorkSpace
 ## Note
-My principal note taking app is the infinite Excalidraw canvas. 
-- Searchability
-- Compatible with Obsidian
+
+infinitive canvas: **Concepts**
+
+> #### Excalidraw vs Concepts
+> 
+> Concept is smoother (better UX)
+>
+> Excalidraw 
+> - free and open-source but it is not mature yet.
+> - Searchability
+> - Compatible with Obsidian
 
 
 Draft Notes --> Obsidian md files
 
 
+> #### Markdown vs Mic Word vs LibreOffice vs TeX vs gdoc
+> 
+> - Mic Word is closed source and not free 
+> - LibreOffice is good for opening word documents
+> - gdoc is free but not open-source. Also, you should get online to save the document completely
+> - Markdown is open-source and free
+> - TeX is open-source and free too. But it is very good for research papers and complex docs
+>
+> LibreOffice for working with Mic Word docs from outside
+>
+> Markdown for every-day use
+>
+> TeX for complex docs (e.g. papers, reports, etc.)
+>
+
+
 ## Management
 File Manager --> Obsidian 
+
 Time Management and Habit tracker --> tick tick
 
 Project management - - > notion
@@ -17,6 +42,7 @@ Project management - - > notion
 
 
 ## Softwares
+- Version Control: Git, GitHub
 
 - IDEs: VScode, Visual Studio Community, ModelSim, QuestaSim (not free), MatLab (not free) 
 
@@ -53,3 +79,18 @@ Project management - - > notion
 	- conda update python
 	- conda activate .venv0
 	- pip install --upgrade pip
+
+
+
+
+## My Skills
+
+- Tensorflow, pytorch
+- EDA tools: Q-flow, Design compiler and primetime
+- Altera, Quartus, MatLab
+- Clock gating 
+- Verification: System verilog assertions, UVM
+- Gem5 to work with multiprocessors systems
+
+
+
