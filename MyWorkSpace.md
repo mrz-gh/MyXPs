@@ -1,4 +1,4 @@
-# MyWorkSpace
+# My Workspace
 ## Note
 
 infinitive canvas: **Concepts**
@@ -50,7 +50,8 @@ Project management - - > notion
   - PDF annotator -> Writing with Pen
   - Adobe Acrobat Pro. -> Not free
 
-- VPN: Geph
+- VPN: Geph, NetMod
+  - linux: Windscribe, Geph
 
 - WinRAR, Potplayer, TeXstudio, MikTeX, KMSAutoLite, Git, Grammarly, IDM (not free), draw.io rather than visio, Spotify
 
@@ -59,38 +60,38 @@ Project management - - > notion
 - Microsoft apps on your phone and OneDrive are useless. Instead of them, use “Google Drive''.
 
 ## Tips
-- Set proxy of IDM to System Proxy :
-	IDM -> Options -> proxy/socks -> Use system setting
+- Set proxy of **IDM** to **System Proxy**.
 
-- Blocking using of the Internet by Programs:
-	-> Windows Defender Firewall
-	-> Advanced Settings
-	-> Outbound Rules 
-	-> New Rule
-	-> Program
-	-> Block Connection...
+- **Blocking Internet** of Specific Programs.
 
 
-- Python: miniconda
+
+- Python: **Miniconda**
 	- Use Miniconda for python and data science. Miniconda installation requires the Internet.
-	- always download new Miniconda
-	- conda create --name .venv0 python=3.9         #for create new environment and must specify python version
-	- conda update conda
-	- conda update python
-	- conda activate .venv0
-	- pip install --upgrade pip
+	
+
+- Avoid using **duplicate files** because you get confused over time when you forget what is the difference between them. Instead, use **referencing** with **version control** systems like Git. 
 
 
+- **Commenting** is critical, even when you get back to your code, you can understand it more rapidly.
 
 
+- Ultimate **'ReadMe'** format:
+  - Outline
+  - Overview
+    - Goal/Motivation of the project
+  - Directory Guide
+  - 
 ## My Skills
 
 - Tensorflow, pytorch
 - EDA tools: Q-flow, Design compiler and primetime
 - Altera, Quartus, MatLab
-- Clock gating 
 - Verification: System verilog assertions, UVM
 - Gem5 to work with multiprocessors systems
 
 
 
+
+
+- DataBase is much more suitable for working with data, not text files and manually sum and work with them

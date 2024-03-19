@@ -46,6 +46,35 @@
 
 ## 3. My apply Emails
 
+
+### 3.0 Rules of Email for apply. 
+
+
+
+
+- ref in email: your 2019 publication  in nature
+
+- Within 3 first authors of the paper
+
+- Email tracker 
+
+- General title: Prospective Master/PhD/Graduate Student/Candidate interested in ...
+
+#### Best accomplishments
+- GPA
+- Rank - (Ranked 1st)
+- University [Study in Iran - US News Best Global Universities](https://www.usnews.com/education/best-global-universities/study-in-iran#top_universities)
+
+---
+
+
+
+
+Ref. [(1) مکاتبه با اساتید - YouTube](https://www.youtube.com/watch?v=xXZyZzW86LY&list=PL3rXObcfMsIJJ-nfDfCtJbTgeUbKewDUo&ab_channel=EZApply)
+
+
+
+
 ### 3.1 Following up on my application to university from professors
 #### 3.1.1 For the professors I have not talked to
 
