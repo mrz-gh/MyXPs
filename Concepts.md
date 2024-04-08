@@ -256,3 +256,6 @@ weak vs strong typing = type checking: runtime vs compile time
 
 
 uvm subscriber
+
+
+identifier vs text 
