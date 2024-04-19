@@ -45,6 +45,10 @@
 </li>
 </div>
 
+*DSU, BANDO - > Tir 
+Italy Embassy - > Shahrivar
+
+Polimi: EE vs HPC vs CE 
 
 
 
