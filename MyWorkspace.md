@@ -6,7 +6,7 @@ Last Update: Apr 19
 
 infinitive canvas: **Concepts**
 
-> #### Excalidraw vs Concepts
+>#### Excalidraw vs Concepts
 >
 > Concept is smoother (better UX)
 >
@@ -70,7 +70,7 @@ infinitive canvas: **Concepts**
 - Ultimate **'ReadMe'** format:
   - Outline
   - Overview
-    - Goal/Motivation of the project
+    - WHY (Goal)
   - Directory Guide
 
 - Do not use '-' and whitespace in identifiers.
@@ -93,31 +93,6 @@ Excel is a proprietary spreadsheet software
 - Gem5 to work with multiprocessors systems
 
 - DataBase is much more suitable for working with data, not text files and manually sum and work with them
-
-## HDL simulator
-
-| Simulator | SV-UVM support (SV and Randomization support)| Mixed-HDL Simulation | Cracked | Open-source |
-|---------|-------------|------------|------------|---------|
-| Cadence Xcelium (xrun) | |  | YES (<https://downloadly.ir/software/engineering-specialized/xcelium/>)| NO |
-| Cadence Incisive |  | | NO| NO |
-| Mentor Graphics Questa (vsim) | YES | YES | YES | NO
-| Synopsys VCS (vcs) | YES | YES | NO | NO |
-| Aldec Active-HDL |  | YES | YES | NO
-| Aldec Riviera-PRO (riviera) | YES | | YES but it is v2014 | NO |
-| Xilinx Vivado Simulator | YES | YES | YES | NO |
-
-- **Questa*-Intel® FPGA** -> **not support Ubuntu LTS 22.04** ==> solution: **RHEL**
-<https://www.intel.com/content/www/us/en/support/programmable/support-resources/design-software/os-support.html?wapkw=operating%20system%20support#tab-blade-3-4>
-
-- **Simulate VHDL by Verilator**: You can synthesize vhdl to a verilog netlist using ghdl - - synth argument which generates a synthesized netlist that you can simulate in verilator.
-
-## HDL Synthesizers
-
-- Xilinx Vivado Synthesis -> Xilinx FPGAs and Xilinx SoCs
-- Synopsys Design Compiler -> ASIC & FPGA
-- Cadence Genus
-- Intel Quartus Prime -> Intel FPGA
-- Yosys -> ASIC, FPGA, ...
 
 ## Automation
 

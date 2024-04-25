@@ -1,8 +1,18 @@
 # Outline
 
-[XPs about my application to USA, Italy, and Canada Universities ](Apply.md)
+- Overview
+- Repo Guide
 
-[My Workspace](MyWorkSpace.md)
+# Overview (WHY)
 
-[My Education Tips and XPs](MyWorkSpace.md)
+Sharing What I Learn throughout My Life
 
+# Repo Guide
+
+- [XPs about my application to USA, Italy, and Canada Universities](Apply.md)
+
+- [My Workspace](MyWorkspace.md)
+
+- [My Education Tips and XPs](Education.md)
+
+- [Computing Hardware Tips](HardwareTechnicalTips.md)

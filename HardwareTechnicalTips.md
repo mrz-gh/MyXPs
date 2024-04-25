@@ -1,18 +1,29 @@
 
-# Verilog/SystemVerilog
+## HDL simulator
 
-- `include vs package
-- Each module has its own scope
+| Simulator | SV-UVM support (SV and Randomization support)| Mixed-HDL Simulation | Cracked | Open-source |
+|---------|-------------|------------|------------|---------|
+| Cadence Xcelium (xrun) | |  | YES (<https://downloadly.ir/software/engineering-specialized/xcelium/>)| NO |
+| Cadence Incisive |  | | NO| NO |
+| Mentor Graphics Questa (vsim) | YES | YES | YES | NO
+| Synopsys VCS (vcs) | YES | YES | NO | NO |
+| Aldec Active-HDL |  | YES | YES | NO
+| Aldec Riviera-PRO (riviera) | YES | | YES but it is v2014 | NO |
+| Xilinx Vivado Simulator | YES | YES | YES | NO |
 
->`ifndef
->
->'define
->
-> //Code
->
->`endif
+- **Questa*-Intel® FPGA** -> **not support Ubuntu LTS 22.04** ==> solution: **RHEL**
+<https://www.intel.com/content/www/us/en/support/programmable/support-resources/design-software/os-support.html?wapkw=operating%20system%20support#tab-blade-3-4>
 
-- xvlog, xelab, xsim - > uvm in vivado
+- **Simulate VHDL by Verilator**: You can synthesize vhdl to a verilog netlist using ghdl - - synth argument which generates a synthesized netlist that you can simulate in verilator.
+
+## HDL Synthesizers
+
+- Xilinx Vivado Synthesis -> Xilinx FPGAs and Xilinx SoCs
+- Synopsys Design Compiler -> ASIC & FPGA
+- Cadence Genus
+- Intel Quartus Prime -> Intel FPGA
+- Yosys -> ASIC, FPGA, ...
+-
 
 ### ModelSim different Versions: (Latest Version of ModelSim Pro : 2021) ==> Deprecated ==> **Questa** is the successor
 
@@ -60,3 +71,18 @@
 
 - Gwave
 - GTKwave
+
+# Verilog/SystemVerilog
+
+- `include vs package
+- Each module has its own scope
+
+>`ifndef
+>
+>'define
+>
+> //Code
+>
+>`endif
+
+- xvlog, xelab, xsim - > uvm in vivado
