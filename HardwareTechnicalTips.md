@@ -1,7 +1,8 @@
 
 # Verilog/SystemVerilog
--   `include vs package
--   Each module has its own scope
+
+- `include vs package
+- Each module has its own scope
 
 >`ifndef
 >
@@ -11,14 +12,9 @@
 >
 >`endif
 
--   xvlog, xelab, xsim - > uvm in vivado
-
-
-
-
+- xvlog, xelab, xsim - > uvm in vivado
 
 ### ModelSim different Versions: (Latest Version of ModelSim Pro : 2021) ==> Deprecated ==> **Questa** is the successor
-
 
 | Version | Description |
 |---------|-------------|
@@ -27,15 +23,13 @@
 | ModelSim SE (Special Edition) | The Simulation Edition of ModelSim, which includes all the features of ModelSim DE and adds support for additional languages like SystemC and SystemVerilog. It is typically used for complex system-level simulations and verification. |
 | ModelSim PE | The Personal Edition of ModelSim, which is a low-cost version targeting individual engineers and small teams. It offers a comprehensive feature set for simulation and debugging and supports various HDLs and verification methodologies. |
 | ModelSim Intel FPGA Edition | A version specifically tailored for Intel FPGA development. It integrates with Intel Quartus Prime design tools and provides enhanced support for Intel FPGA devices and IP cores. |
-|ModelSim XE| Xilinx Edition 
+|ModelSim XE| Xilinx Edition
 | ModelSim Altera Edition | Previously the official simulation tool for Altera (now Intel) FPGA designs. It offered seamless integration with Altera Quartus II software and supported advanced simulation features for Altera FPGA devices. However, it has been superseded by ModelSim Intel FPGA Edition. he official simulation tool for Altera FPGA designs. It provides advanced simulation and debugging capabilities for larger and complex projects. Integrated with Quartus II software.|
 | ModelSim-Altera Starter Edition | A free version of ModelSim provided by Altera (now Intel) for use with their FPGA designs. It offers basic simulation and debugging capabilities for smaller projects.  
 
-
 [ChatGPT]
 
-
-- **ModelSim-Altera Starter Edition** software is the same as ModelSim-Altera Edition software except for two areas. ModelSim-Altera Starter Edition’s **simulation performance is lower** than **ModelSim-Altera Edition** and has a **line limit** of 10,000 executable lines compared to the unlimited number of lines allowed in the ModelSim-Altera Edition. 
+- **ModelSim-Altera Starter Edition** software is the same as ModelSim-Altera Edition software except for two areas. ModelSim-Altera Starter Edition’s **simulation performance is lower** than **ModelSim-Altera Edition** and has a **line limit** of 10,000 executable lines compared to the unlimited number of lines allowed in the ModelSim-Altera Edition.
 
 - [Modelsim ASE starter not directly support UVM][https://community.intel.com/t5/Intel-FPGA-Software-Installation/Modelsim-ASE-starter-not-directly-support-UVM/td-p/1288356]
 
@@ -52,4 +46,17 @@
           Dave Rich from Mentor does not recomment the use of program blocks for any user: http://go.mentor.com/programblocks
 
     Out of the above, only the randomize method is used by the UVM library.
-    https://eda-playground.readthedocs.io/en/latest/modelsim-uvm.html
+    <https://eda-playground.readthedocs.io/en/latest/modelsim-uvm.html>
+
+## Waveviewers
+
+### closed source
+
+- ViVa
+- WaveView
+- AvanWaves
+
+### Open-source
+
+- Gwave
+- GTKwave
