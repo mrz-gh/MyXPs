@@ -1,6 +1,11 @@
-Last Update: Apr 19
+Last Update: May 1
 
 # My Workspace
+
+One of my core beliefs:
+  everything is relative =>
+  Compare & Contrast based on technical features (not vague features) =>
+  Need tables to do that
 
 ## Note Taking Apps
 
@@ -8,47 +13,38 @@ infinitive canvas: **Concepts**
 
 >#### Excalidraw vs Concepts
 >
-> Concept is smoother (better UX)
->
-> Excalidraw
->
-> - free and open-source but it is not mature yet.
-> - Searchability
-> - Compatible with Obsidian
+> Software | UX (being smooth) | open-source | Searchability | Compatibility |
+> ----------|------------|-----------|----------|--------|
+> Concept | Smoother | No | less | | ???
+> Excalidraw | less smooth | YES | YES & Compatible with General Search of **Obsidian** |  Obsidian |
 
 > #### Markdown vs MS Word vs LibreOffice vs TeX vs gdoc
 >
-> - MS Word is closed source and not free
-> - LibreOffice is good for opening word documents
-> - gdoc is free but not open-source. Also, you should get online to save the document completely
-> - Markdown is open-source and free
-> - TeX is open-source and free too. But it is very good for research papers and complex docs
->
-> LibreOffice for working with .docx from outside
->
-> Markdown for every-day use
->
-> TeX for complex docs (e.g. papers, reports, etc.)
+> Office suite | open-source | Usage | Disadv |Markup Language vs WYSIWYG
+> -------------|-------------|-------| ------- | --------
+> MS office    |  NO         |       |         | WYSIWYG |
+> LibreOffice  |  YES        | good for opening office documents (.docx) | | WYSIWYG
+> gdoc(google doc) | NO (free) |My Journals: Google Drive (**Easier to access** than **.md** files on the **phone**)      | No offline | WYSIWYG |
+> Markdown     |  YES        | fast creation (every-day use) | | Markup Language |
+> TeX          |  YES        | complex docs(research papers, report, etc.) | |Markup Language
 >
 
-## Management
-
-- My Journals: Google Drive (**Easier to access** than **.md** files on the **phone**)
+> [Comparison of Office suites (Wikipedia)](https://en.wikipedia.org/wiki/Comparison_of_office_suites)
 
 ## Softwares
 
-- Version Control: Git, GitHub
+- Version Control: Git (GitHub)
 
-- IDEs: VScode, QuestaSim (Commercial), MatLab (Commercial)
+- IDEs: VScode(open-source), QuestaSim (Commercial), MatLab (Commercial)
 
 - PDF tools:
   - PDF annotator -> Writing with Pen
   - Adobe Acrobat Pro. -> Commercial
 
-- VPN: V2ray
+- VPN: V2ray (open-source)
   - linux: V2ray Client: Nekoray
 
-- WinRAR, Potplayer, TeXstudio, MikTeX, KMSAutoLite, Quilbot, Motrix, draw.io rather than MS Visio (Commercial)
+- WinRAR, Potplayer, TeXstudio, MikTeX, KMSAutoLite, Quilbot, draw.io rather than MS Visio (Commercial)
 
 - Microsoft apps on your phone and OneDrive are useless. Instead of them, use “Google Drive''.
 
@@ -86,7 +82,7 @@ Excel is a proprietary spreadsheet software
 
 ## My Skills
 
-- Tensorflow, pytorch
+- Tensorflow, Pytorch
 - EDA tools: Q-flow, Synopsis Design Compiler and PrimeTime PX
 - Questa, Quartus, MatLab
 - Verification: System verilog assertions, UVM
@@ -97,7 +93,6 @@ Excel is a proprietary spreadsheet software
 ## Automation
 
 - CLI tools > GUI tools
-  - TCL in ModelSim & QuestaSim
 
 ### Dependancy
 
@@ -107,6 +102,13 @@ Excel is a proprietary spreadsheet software
   - learning curve -> sol : ChatGPT, Great Tutorials
 
 - More **portable and readable** source code: Handling file dependancies with **language built-in dependancy features** such as 'include' and 'import' in verilog
+
+---
+
+### Download Manager
+
+- Speed: IDM > Firefox (the difference is very high, Why ???)
+- Motrix (open source ) speed ???
 
 ---
 Why English ???

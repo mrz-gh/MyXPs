@@ -177,7 +177,6 @@ There are several alternatives to the Universal Verification Methodology (UVM) f
 These are just a few alternatives to UVM in hardware verification. The choice of methodology depends on the specific requirements of the project, the complexity of the design, and the available resources and expertise. Many verification projects combine multiple methodologies to achieve comprehensive verification coverage.
 
 Markup Language vs WYSIWYG =
-TeX vs MS Word
 .rst vs .md
 xml, html
 
