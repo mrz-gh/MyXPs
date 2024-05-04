@@ -47,7 +47,7 @@ infinitive canvas: **Concepts**
   - linux: V2ray Client: Nekoray
  
 - Audio & Video Player: VLC player -> supports linux and Windows
-                      - Pot player -> only support MS Win [Pot player vs VLC player](https://moviemaker.minitool.com/moviemaker/potplayer-vs-vlc.html)
+  - Pot player -> only support MS Win [Pot player vs VLC player](https://moviemaker.minitool.com/moviemaker/potplayer-vs-vlc.html)
 
 - WinRAR, TeXstudio, MikTeX, KMSAutoLite, Quilbot, draw.io rather than MS Visio (Commercial)
 
