@@ -88,11 +88,7 @@ Prune
 
 Topk
 
-Fork
-
 Dependabot
-
-Standalone
 
 Error-prone
 
@@ -105,8 +101,8 @@ Saint Valentine
 Morph
 
 - Rendering
-  - Ray Tracing
-  - Scanline Rendering
+	- Ray Tracing
+	- Scanline Rendering
 
 Chiplet
 vs
@@ -127,10 +123,6 @@ Adversarial
 Closed Source, Proprietary, commercial
 
 Tex and Latex
-
-Chrome , Chromium
-
-Mozilla FireFox
 
 Newlib vs Linux
 
@@ -243,8 +235,8 @@ free =>x open-source
 But MangoDB + Additional features = commercial
 
 vpn
-    1. Hide from ISP,..
-    2.Tunneling into a remote network
+		1. Hide from ISP,..
+		2.Tunneling into a remote network
 
 SiFive
 Gnome
