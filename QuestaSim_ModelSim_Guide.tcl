@@ -68,29 +68,28 @@ proc init_sim_QuestaSim {} {
 
 proc add_desired_signals {} {
     add wave -position insertpoint  \
-    sim:/test_sayac_top/clk;
-    add wave -position insertpoint  \
-    sim:/test_sayac_top/rst;
-    add wave -position insertpoint  \
-    sim:/test_sayac_top/SAYAC/DataPath/opcode;
-    add wave -position insertpoint  \
-    sim:/test_sayac_top/SAYAC/DataPath/Instruction;
-    add wave -position insertpoint  \
-    sim:/test_sayac_top/SAYAC/DataPath/outPC;
-    add wave -position insertpoint  \
-    sim:/test_sayac_top/SAYAC/Controller/pstate;
-} 
+    sim:/alu_tb/alu_vif/N \
+    sim:/alu_tb/alu_vif/clk \
+    sim:/alu_tb/alu_vif/reset_n \
+    sim:/alu_tb/alu_vif/alu_out \
+    sim:/alu_tb/alu_vif/alu_status \
+    sim:/alu_tb/alu_vif/alu_ready \
+    sim:/alu_tb/alu_vif/alu_enable \
+    sim:/alu_tb/alu_vif/alu_in1 \
+    sim:/alu_tb/alu_vif/alu_in2 \
+    sim:/alu_tb/alu_vif/alu_op;
+}
 
 
-proc write_vcd {word number2} {
+proc write_vcd {word duration} {
 
     set vcdfolder "D:/Education/Undergrad_Proj/Proj/SAYAC/ModelSim/Benchmarks";     # Replace with the actual folder path
     set vcdfilepath [file join $vcdfolder "$word.vcd"];
         
 
     vcd file $vcdfilepath;
-    vcd add -r test_sayac_top/SAYAC/*
-    run $number2 ns
+    vcd add -r test_sayac_top/SAYAC/*; # all signals
+    run $duration ns; # nanosecond 
 
     quit -sim; ### must quit simulation to close the vcd file in the simulation environment
 
