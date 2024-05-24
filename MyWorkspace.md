@@ -11,11 +11,11 @@ One of my core beliefs:
 
 infinitive canvas: **Concepts**
 
->#### Excalidraw vs Concepts
+>### Excalidraw vs Concepts
 >
 > Software | UX (being smooth) | open-source | Searchability | Compatibility |
 > ----------|------------|-----------|----------|--------|
-> Concept | Smoother | No | less | | ???
+> Concept | Smoother | No | less | | ??? |
 > Excalidraw | less smooth | YES | YES & Compatible with General Search of **Obsidian** |  Obsidian |
 
 > #### Markdown vs MS Word vs LibreOffice vs TeX vs gdoc
@@ -32,7 +32,8 @@ infinitive canvas: **Concepts**
 > [Comparison of Office suites (Wikipedia)](https://en.wikipedia.org/wiki/Comparison_of_office_suites)
 
 ## Softwares
-- Internet Browser: Firefox -> open-source 
+
+- Internet Browser: Firefox -> open-source
                     - Google Chrome & MS Edge -> x open-source (Chromium (core of Chrome & Edge) is open-source)
 
 - Version Control: Git (GitHub)
@@ -45,13 +46,17 @@ infinitive canvas: **Concepts**
 
 - VPN: V2ray (open-source)
   - linux: V2ray Client: Nekoray
- 
+
 - Audio & Video Player: VLC player -> supports linux and Windows
   - Pot player -> only support MS Win [Pot player vs VLC player](https://moviemaker.minitool.com/moviemaker/potplayer-vs-vlc.html)
 
 - WinRAR, TeXstudio, MikTeX, KMSAutoLite, Quilbot, draw.io rather than MS Visio (Commercial)
 
 - Microsoft apps on your phone and OneDrive are useless. Instead of them, use “Google Drive''.
+
+- Callback vs calling a func within another function
+- CentOS and RuckyLinux are open-source alternatives for RHEL
+  - CentOS is about its end of life (EOL)
 
 ## Tips
 
@@ -117,3 +122,17 @@ Excel is a proprietary spreadsheet software
 
 ---
 Why English ???
+
+## Network (Necessary in Iran)
+
+Here's a comparison of the three:
+
+| Feature | Sockets | HTTP | FTP |
+| ------ | ------ | ------ | ------ |
+| Purpose | General-purpose process-to-process communication | Web data transfer | File transfer |
+| Level | Low-level (networking) | Application-level | Application-level |
+| Protocol Type | Connection-oriented (TCP) or connectionless (UDP) | Connection-oriented | Connection-oriented |
+| Usage | Flexible, customizable | Web browsing, data retrieval | File upload/download, file management |
+| Security | Depends on implementation | Uses HTTPS for secure transmission | Uses encryption and authentication |
+| Data Format | Raw data, customizable | Text, HTML, images, videos, etc. | Files |
+| Common Ports | TCP: 80, 443; UDP: 53, 123 | TCP: 80, 443 | TCP: 20 (data), 21 (control) |
