@@ -160,8 +160,10 @@
 
 ## Hardware Concepts
 
-- round-robin arbiter
-- sanity testing is a rapid and initial assessment of the basic functionality of a software system.
+- **round-robin arbiter**
+- **sanity testing** is a **rapid** and **initial assessment** of the basic functionality of a software system.
+- **Wishbone, APB, AXI, Avalon** are **bus** protocols.
+
 
 ## FPGAs
 
