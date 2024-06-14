@@ -6,3 +6,9 @@
 - **Upgrade Tensorflow** version of the code
 - **Pytorch** Implementation
 - Convert inputs and weights and output to **bfloat 16**, and train the net with them without changing to float 32
+
+- USD values
+ 	- مسافرتی
+ 	- آزاد
+ 	- دولتی
+

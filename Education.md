@@ -1,6 +1,6 @@
 # Education Tips
 
-- University is not meant for studying, but it is for
+- **University** is not meant for studying, but it is for
   - Networking (professors, companies, )
   - Presentation Skills
   - research with the best professors  
