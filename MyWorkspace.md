@@ -90,6 +90,9 @@ Excel is a proprietary spreadsheet software
 
 - in TCL, use ; at the end of each line
 
+
+- There is no free tier for the OpenAI API. All API requests are charged at a rate based on the amount of data you’re using. 
+
 ## My Skills
 
 - Tensorflow, Pytorch

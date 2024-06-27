@@ -1,4 +1,16 @@
-# HDL simulator
+# HW Tips
+
+## Open-source Community
+
+- <https://github.com/openhwgroup>
+- <https://github.com/pulp-platform>
+- Siemens Verification Academy (Free for Students)
+- <https://github.com/chipsalliance>
+- <https://github.com/lowRISC>
+- <https://github.com/riscv>
+- <https://github.com/uobdv/Design-Verification>
+
+## HDL simulator
 
 | Simulator | SV-UVM support (SV and Randomization support(.randomize() method different from $random()))| Mixed-HDL Simulation | Cracked | Open-source |
 |---------|-------------|------------|------------|---------|
@@ -12,20 +24,10 @@
 | Verilator | ??? | ??? | - | Yes |
 | Icarus Verilog (iverilog) | ??? | ??? | - | Yes |
 
-- **Questa*-Intel® FPGA** -> **not support Ubuntu** ==> solution: **RHEL** and **100% Binary-compatible OSes** with RHEL
+- **Questa*-Intel® FPGA**-> support **Ubuntu** besides **RHEL**, **100% Binary-compatible OSes** with RHEL, SUSE* SLE
 <https://www.intel.com/content/www/us/en/support/programmable/support-resources/design-software/os-support.html?wapkw=operating%20system%20support#tab-blade-3-4>
 
 - **Simulate VHDL by Verilator**: You can synthesize vhdl to a verilog netlist using ghdl - - synth argument which generates a synthesized netlist that you can simulate in verilator.
-
-# HDL Synthesizers
-
-| Synthesizer tool | Usage | Open-source |
-|-----------------|-------|-------------|
-| Xilinx Vivado Synthesis | **Xilinx** FPGAs and SoCs | NO |
-| Synopsys Design Compiler | ASIC & FPGA | NO |
-| Cadence Genus | ??? | NO |
-| Intel Quartus Prime | **Intel** FPGA | NO |
-| Yosys | ASIC & FPGA | YES |
 
 ### ModelSim different Versions: (Latest Version of ModelSim Pro : 2021) ==> Deprecated ==> **Questa** is the successor
 
@@ -65,20 +67,30 @@
 
 - Intel: ModelSim® and Questa® Sim versions were previously listed as 10.6, 10.7, etc., but from 2019, they are 2019.1, 2020.1, etc.
 
-# Waveviewers
+## HDL Synthesizers
 
-## closed source
+| Synthesizer tool | Usage | Open-source |
+|-----------------|-------|-------------|
+| Xilinx Vivado Synthesis | **Xilinx** FPGAs and SoCs | NO |
+| Synopsys Design Compiler | ASIC & FPGA | NO |
+| Cadence Genus | ??? | NO |
+| Intel Quartus Prime | **Intel** FPGA | NO |
+| Yosys | ASIC & FPGA | YES |
+
+## Waveviewers
+
+### closed source
 
 - ViVa
 - WaveView
 - AvanWaves
 
-## Open-source
+### Open-source
 
 - Gwave
 - GTKwave
 
-# Verilog/SystemVerilog
+## Verilog/SystemVerilog
 
 - `include vs package
 - Each module has its own scope
@@ -133,7 +145,7 @@
 
 - '@' means until first change simulation goes vs Delay (#5 ns)
 
-# Automation
+## Automation
 
 - **TCL** over **.do** files in QuestaSim/ModelSim
   - standalone TCL vs TCL/TK
@@ -146,12 +158,14 @@
   - CMake: buildsystem generator ==> compability for various OSes
   - Make: buildsystem ==> limited compability
 
-# Hardware Concepts
+## Hardware Concepts
 
-- round-robin arbiter
-- sanity testing is a rapid and initial assessment of the basic functionality of a software system.
+- **round-robin arbiter**
+- **sanity testing** is a **rapid** and **initial assessment** of the basic functionality of a software system.
+- **Wishbone, APB, AXI, Avalon** are **bus** protocols.
 
-# FPGAs
+
+## FPGAs
 
 - Advancements in Technology:
   - **FinFET and 3D Stacked FPGAs**: Future FPGAs will leverage FinFET (Fin Field-Effect Transistor) and 3D stacked technologies to increase density, reduce power consumption, and improve performance.
