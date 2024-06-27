@@ -46,9 +46,9 @@ LCD classes:
 
 - LDPC
 
-# if vs #ifndif
+- if vs #ifndif
 
-# define vs const
+- define vs const
 
 ANNS
 
