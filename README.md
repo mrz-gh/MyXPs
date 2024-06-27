@@ -1,13 +1,15 @@
-# Outline
+# Life Journey
+
+## Outline
 
 - Overview
 - Repo Guide
 
-# Overview (WHY)
+## Overview (WHY)
 
 Sharing What I Learn throughout My Life
 
-# Repo Guide
+## Repo Guide
 
 - [XPs about my application to USA, Italy, and Canada Universities](Apply.md)
 
@@ -16,6 +18,3 @@ Sharing What I Learn throughout My Life
 - [My Education Tips and XPs](Education.md)
 
 - [Computing Hardware Tips](HardwareTechnicalTips.md)
-
-
-
