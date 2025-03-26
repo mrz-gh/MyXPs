@@ -1,4 +1,3 @@
-# HW Tips
 
 ## Open-source Community
 
@@ -12,17 +11,17 @@
 
 ## HDL simulator
 
-| Simulator | SV-UVM support (SV and Randomization support(.randomize() method different from $random()))| Mixed-HDL Simulation | Cracked | Open-source |
-|---------|-------------|------------|------------|---------|
-| Cadence Xcelium (xrun) | ??? | ??? | YES (<https://downloadly.ir/software/engineering-specialized/xcelium/>)| NO |
-| Cadence Incisive | ??? | ??? | NO| NO |
-| Mentor Graphics Questa (vsim) | YES | YES | YES | NO |
-| Synopsys VCS (vcs) | YES | YES | NO | NO |
-| Aldec Active-HDL | ??? | YES | YES | NO |
-| Aldec Riviera-PRO (riviera) | YES | ??? | YES but it is v2014 | NO |
-| Xilinx Vivado Simulator | YES | YES | YES | NO |
-| Verilator | ??? | ??? | - | Yes |
-| Icarus Verilog (iverilog) | ??? | ??? | - | Yes |
+| Simulator                     | SV-UVM support (SV and Randomization support(.randomize() method different from $random())) | Mixed-HDL Simulation | Cracked                                                                 |
+| ----------------------------- | ------------------------------------------------------------------------------------------- | -------------------- | ----------------------------------------------------------------------- |
+| Cadence Xcelium (xrun)        | ???                                                                                         | ???                  | YES (<https://downloadly.ir/software/engineering-specialized/xcelium/>) |
+| Cadence Incisive              | ???                                                                                         | ???                  | NO                                                                      |
+| Mentor Graphics Questa (vsim) | YES                                                                                         | YES                  | YES                                                                     |
+| Synopsys VCS (vcs)            | YES                                                                                         | YES                  | NO                                                                      |
+| Aldec Active-HDL              | ???                                                                                         | YES                  | YES                                                                     |
+| Aldec Riviera-PRO (riviera)   | YES                                                                                         | ???                  | YES but it is v2014                                                     |
+| Xilinx Vivado Simulator       | YES                                                                                         | YES                  | YES                                                                     |
+| Verilator                     | Not fully                                                                                   | ???                  | open-source                                                             |
+| Icarus Verilog (iverilog)     | Not fully                                                                                   | ???                  | open-source                                                             |
 
 - **Questa*-Intel® FPGA**-> support **Ubuntu** besides **RHEL**, **100% Binary-compatible OSes** with RHEL, SUSE* SLE
 <https://www.intel.com/content/www/us/en/support/programmable/support-resources/design-software/os-support.html?wapkw=operating%20system%20support#tab-blade-3-4>
@@ -45,8 +44,6 @@
 |ModelSim XE| Xilinx Edition
 | ModelSim Altera Edition | Previously the official simulation tool for Altera (now Intel) FPGA designs. It offered seamless integration with Altera Quartus II software and supported advanced simulation features for Altera FPGA devices. However, it has been superseded by ModelSim Intel FPGA Edition. he official simulation tool for Altera FPGA designs. It provides advanced simulation and debugging capabilities for larger and complex projects. Integrated with Quartus II software.|
 | ModelSim-Altera Starter Edition | A free version of ModelSim provided by Altera (now Intel) for use with their FPGA designs. It offers basic simulation and debugging capabilities for smaller projects.  
-
-[ChatGPT]
 
 - **ModelSim-Altera Starter Edition** software is the same as ModelSim-Altera Edition software except for two areas. ModelSim-Altera Starter Edition’s **simulation performance is lower** than **ModelSim-Altera Edition** and has a **line limit** of 10,000 executable lines compared to the unlimited number of lines allowed in the ModelSim-Altera Edition.
 
@@ -93,15 +90,15 @@
 ## Verilog/SystemVerilog
 
 - `include vs package
-- Each module has its own scope
+- Each module has to be defined just once using
 
-   `ifndef
+      `ifndef
 
-   'define
+      'define
 
-    //Code
+        //Code
 
-   `endif
+      `endif
 
 - xvlog, xelab, xsim - > **uvm in vivado**
 
@@ -113,8 +110,6 @@
 - **Fork Join** SV (Multi-threading)
 - **'ref'** keyword
 - use "modport" and "bind" for the interfaces
-- Variable name conventions:
-  - -i, _o,_d
 
 - SV coverage
 - **"final"** in opposite of **"initial"**
@@ -131,7 +126,7 @@
 - **Verible** : open source SystemVerilog parser
 
 - file formats and extensions in Hardware area:
-- .emac or .el , .org, .md, .tcl, .ini, .f
+  - .emac or .el , .org, .md, .tcl, .ini, .f
 
 - in SV, there is no built-in function to get thread ID when using fork-join
 
@@ -162,8 +157,31 @@
 
 - **round-robin arbiter**
 - **sanity testing** is a **rapid** and **initial assessment** of the basic functionality of a software system.
-- **Wishbone, APB, AXI, Avalon** are **bus** protocols.
 
+###### Bus protocols:
+- Wishbone
+- AMBA: AHB, APB, AXI
+- Avalon
+### AMBA Bus Evolution Overview
+| Protocol       | Primary Use Case                             | Key Features                                          |
+|----------------|---------------------------------------------|-----------------------------------------------------|
+| **AXI**        | High-speed memory and peripheral connections | High throughput, pipelining, burst transfers        |
+| **AHB**        | High-performance system interconnect         | Moderate complexity, pipelined, shared bus          |
+| **APB**        | Low-speed peripherals                        | Simple, non-pipelined, low power                    |
+| **ACE**        | Cache-coherent multi-core systems            | Extensions for AXI to support coherence             |
+| **CHI**        | High-end multi-processor systems             | Coherent, scalable, cluster-based communication     |
+| **ATB**        | Debugging and tracing                       | Captures trace data for system analysis             |
+| **ASB**        | Legacy systems                               | Replaced by AHB and AXI in modern designs           |
+
+
+
+###### ISA
+- AMD, Intel - > x86 ISA
+- SiFive -> RISC-V
+- MIPS
+- PowerPC
+
+Buffer - Cache - RAM
 
 ## FPGAs
 
@@ -173,3 +191,7 @@
 - New Business Models and Ecosystems:
   - **FPGA-as-a-Service (FaaS)**: Cloud-based FPGA services will emerge, offering on-demand access to FPGA resources, reducing costs, and increasing adoption.
   - **Open-Source FPGA Ecosystems**: Open-source FPGA platforms will become more prevalent, fostering innovation, collaboration, and community-driven development.
+
+
+
+

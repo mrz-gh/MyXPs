@@ -7,7 +7,7 @@
 
 ## Overview (WHY)
 
-Sharing What I Learn throughout My Life
+Sharing What I've Learned 
 
 ## Repo Guide
 

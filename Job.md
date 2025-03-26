@@ -1,7 +1,14 @@
 - **سابقه کاری** بر اساس بیمه در ایران تعیین می شود
 - **سفته** را فقط بانک ملی می دهد
 
-### My Internship Summary
+- How to increase salary:
+	- employment history (Yearly)
+	- Government salary increase (Yearly)
+	- To be an important member
+
+- Based on employment rules of the Tamin Ejtemyee insurance, the base salary cannot get decreased. 
+
+## My Internship Summary
 
 - **Upgrade Tensorflow** version of the code
 - **Pytorch** Implementation
