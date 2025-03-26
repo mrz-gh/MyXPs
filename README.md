@@ -1,4 +1,4 @@
-# Life Journey
+# My XPs
 
 ## Outline
 
