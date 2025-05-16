@@ -251,9 +251,11 @@ Buffer - Cache - RAM
 ## Device Technologies 
 
 
-![[Pasted image 20250424201441.png]]
+![alt_text](./figures/Pasted%20image%2020250424201441.png)
+
 **Wafer Bonding:**
-![[Pasted image 20250424201246.png]]
+
+![alt_text](./figures/Pasted%20image%2020250424201246.png)
 ### Chiplets vs Monolithic Chip
 
  ✅ Heterogeneous Integration
@@ -271,7 +273,8 @@ But chiplets still win in manufacturing scalability:
 
 Chiplets scale better economically → e.g., AMD builds 64-core EPYC CPUs from 8-core chiplets (modular replication).  
 
-![[Pasted image 20250424195425.png]]
+
+![alt_text](./figures/Pasted%20image%2020250424195425.png)
 ### 3D-integeration:
 - **TSV-based Stacking**
 - M3D (Monolithic 3D-staking)
@@ -309,13 +312,11 @@ So:
 ✅ Chiplets are not connected via traditional PCB.
 ✅ Chiplets use silicon **interposers, EMIBs, or advanced substrates** for fast and dense interconnects.
 
-  
-![[Pasted image 20250424194214.png]]
+![alt_text](./figures/Pasted%20image%2020250424194214.png)
 
-![[Pasted image 20250424194846.png]]
+![alt_text](./figures/Pasted%20image%2020250424194846.png)
 
-
-![[Pasted image 20250424195347.png]]
+![alt_text](./figures/Pasted%20image%2020250424195347.png)
 
 # FPGAs
 FPGA vendors: Intel, Xilinx, Microchip, ...
