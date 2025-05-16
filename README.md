@@ -17,7 +17,7 @@ Sharing What I've Learned
 
 - [My Education Tips and XPs](Education.md)
 
-- [Computing Hardware Tips](Hardware%20Technical%20Tips.md)
+- [Computing Hardware Tips](HardwareTechnicalTips.md)
 
 
 

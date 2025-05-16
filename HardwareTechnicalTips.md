@@ -26,6 +26,13 @@
 
 
 
+
+**Keywords**:
+
+IDE, EDA tools, Verilog, Productivity, Obsidian, second brain, FOSS, report writing, Hardware coding, digital hardware, von Neuman, non-von- Neuman computing, Quantum computing, computers, PC, video game, FPGA, Neuromorphic computing, AI hardware, LLM provider, LLM free api, LLM free, 
+
+
+
 # Open-source Community
 
 - <https://github.com/openhwgroup>
@@ -35,6 +42,7 @@
 - <https://github.com/lowRISC>
 - <https://github.com/riscv>
 - <https://github.com/uobdv/Design-Verification>
+- [systemverilog.io ](https://www.systemverilog.io/)
 
 # TOOLs 
 
@@ -198,6 +206,8 @@
 - the **length of variables and literals** must be accute in verilog and SV
 
 - '@' means until first change simulation goes vs Delay (#5 ns)
+
+- PLI vs DPI Comparison
 
 ## Automation
 

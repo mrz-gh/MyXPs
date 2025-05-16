@@ -415,4 +415,4 @@ Secondly, I am described as a person who is on time. For example, I have never d
 هولوگرام دار
 ثبت شده تو سامانه
 
-![alt text](image.png)
+![alt text](./figures/image.png)
