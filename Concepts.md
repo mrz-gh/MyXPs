@@ -7,6 +7,8 @@
 ![alt text](./figures/OS_Boot_1.png)
 ![alt text](./figures/OS_Boot_2.png)
 
+SCURE BOOT
+FSBL
 
 ---
 - Callback vs calling a func within another function
