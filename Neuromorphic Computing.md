@@ -116,15 +116,6 @@ PIM helps overcome the "memory wall" in modern computing.
 
 ## Researching PIM Using FPGAs
 
-### Why Use FPGAs for PIM Research?
-
-* **Reconfigurability** – Rapid testing of near-memory, in-memory, or hybrid architectures
-* **Hardware Customization** – Custom compute logic inside/near memory models
-* **Real-World Testing** – High-bandwidth memory-equipped FPGAs mimic PIM behavior
-* **Cost-Effective** – Much cheaper than ASIC tape-out
-
----
-
 ### FPGA-Based PIM Approaches
 
 #### 1. Near-Memory Processing (FPGA + External Memory)
@@ -249,3 +240,9 @@ Mix of on-FPGA logic + off-chip memory with computation.
 
 
 It's important to note that while SNNs hold great promise for these applications due to their inherent properties, ongoing research is crucial to overcome challenges such as training deep SNNs, achieving comparable accuracy to ANNs on all tasks, and developing efficient hardware platforms to fully exploit their potential. The development of learning to learn methods, as discussed in our previous conversation, could further enhance the adaptability and efficiency of SNNs in various real-world applications, especially those requiring online learning and adaptation on edge devices.
+
+
+
+
+
+**TNN**

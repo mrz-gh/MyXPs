@@ -31,8 +31,10 @@
 - Obsidian is not open-source.  
 - Logseq is an AppImage for Linux, so do not run easily and also its Excalidraw plugin is out-of-date. 
 - "VScode", "Obsidian", "Logseq" do not search a keyword in PDFs.
+- obsidian can search through multiple pdfs
 
 LateX for linux -> TeX studio (support RTL in opposite to VScode, also better that Overleaf because it is offline, also very easy to install)
+- issues of images in latex ???
 
 - I couldn't Dockerize MS office because it requires to be cracked, my office installer has gui installer but gui is not supported by docker. therefore it canceled it.
 - The Linux distribution with the largest community is typically considered to be **Ubuntu**.
@@ -46,11 +48,16 @@ LateX for linux -> TeX studio (support RTL in opposite to VScode, also better th
       - CentOS is about its end of life (EOL)
  
 ##### IDEs: **QuestaSim** (Commercial), **MatLab** (Commercial)
+
 ##### Editor: **VScode** (open-source)
   - VScode > notepad++ > notepad,  
+  - Zed
+  - Cursor AI: propriety
+  - .vscode
+  - .idea -> Proprietry and Huge size
 
 ##### Internet Browser:
-  1. **Firefox** -> open-source
+  1. **Firefox** -> open-source ✅
   2. MS Edge -> ~~open-source~~
     - MS Edge > Google Chrome
       - (Chromium (core of Chrome & Edge) is open-source)
@@ -66,19 +73,24 @@ LateX for linux -> TeX studio (support RTL in opposite to VScode, also better th
   - Windows V2ray Client: **v2rayN**
 
 ##### Audio & Video Player:
-  1. **VLC player** -> supports Linux and Windows
+  1. **VLC player** ✅ -> supports Linux and Windows 
   2. Pot player -> only support MS Win [Pot player vs VLC player](https://moviemaker.minitool.com/moviemaker/potplayer-vs-vlc.html)
 
-- WinRAR, TeXstudio, MikTeX, KMSAutoLite, Quilbot, draw.io rather than MS Visio (Commercial)
+- WinRAR, TeXstudio, MikTeX, KMSAutoLite, Quilbot, draw.io rather than MS Visio (Proprietary)
 
 - Microsoft apps on your phone and OneDrive are useless. Instead of them, use “Google Drive''.
 
 ## Tips
 
+- **OwnCloud** is open source file sync and share software on your servers.
+
 - **Blocking Internet** of Specific Programs.
 
 - Python: **Miniconda**
   - Use Miniconda for python and data science. Miniconda installation requires the Internet.
+  - conda vs venv vs pyenv : conda env are globally accessible unlike .venv environment
+	`conda create --name new_env --clone old_env`
+
 
 - Avoid using **duplicate files** because you get confused over time when you forget what is the difference between them. Instead, use **referencing** with **version control** systems like Git.
 
@@ -115,10 +127,6 @@ Excel is a proprietary spreadsheet software
 
 - DataBase is much more suitable for working with data, not text files and manually sum and work with them
 
-## Automation
-
-- CLI tools > GUI tools
-
 ### Dependancy
 
 - Build tools
@@ -136,30 +144,85 @@ Excel is a proprietary spreadsheet software
   - Speed: IDM > Firefox (the difference is very high, Why ???)
 
 ---
-Why English ???
-
-## Network (Necessary in Iran)
-
-| Feature       | Sockets                                           | HTTP                               | FTP                                   |
-| ------------- | ------------------------------------------------- | ---------------------------------- | ------------------------------------- |
-| Purpose       | General-purpose process-to-process communication  | Web data transfer                  | File transfer                         |
-| Level         | Low-level (networking)                            | Application-level                  | Application-level                     |
-| Protocol Type | Connection-oriented (TCP) or connectionless (UDP) | Connection-oriented                | Connection-oriented                   |
-| Usage         | Flexible, customizable                            | Web browsing, data retrieval       | File upload/download, file management |
-| Security      | Depends on implementation                         | Uses HTTPS for secure transmission | Uses encryption and authentication    |
-| Data Format   | Raw data, customizable                            | Text, HTML, images, videos, etc.   | Files                                 |
-| Common Ports  | TCP: 80, 443; UDP: 53, 123                        | TCP: 80, 443                       | TCP: 20 (data), 21 (control)          |
-
-vpn
-		1.Hide from ISP,..
-		2.Tunneling into a remote network
-
-- DNS Filter
-- Warp
-- fast and stable Network in Iran
-  - Warp with Irancell & Rightel : do not work 
-  - Irancell (Modem) is unstable and slow in Kashmar compared to IR-MCI
-
-
-
 - commit ID can be used as suffix identifier of files.
+
+
+
+
+
+My projects: 
+
+- CPU:
+    
+
+- 1. ARM Implementations
+    
+
+- ARMish_MultiCycle: A multi-cycle implementation of an ARM-like CPU.
+    
+- ARM_Pipeline_WithCache_FullForwarding_WithControlHazardHandling: A pipelined ARM CPU with cache, full forwarding, and control hazard handling.
+    
+
+- 2. MIPS Implementations
+    
+
+- MIPS_SingleCycle: A basic single-cycle implementation of a MIPS CPU.
+    
+- MIPS_SingleCycle_MoreInstructions: An extended single-cycle MIPS CPU supporting additional instructions.
+    
+- MIPS_Pipeline_FullForwarding_NoControlHazardHandling: A pipelined MIPS CPU with full forwarding but no control hazard handling.
+    
+- MIPS_Pipeline_FullForwarding_WithControlHazardHandling: A pipelined MIPS CPU with full forwarding and control hazard handling.
+    
+
+- Restoring Division and Non-Restoring Division
+    
+- Gate-level:
+    
+
+- 2-input CMOS NAND
+    
+- CMOS Tri-State Buffer
+    
+- 4- to-1 MUX
+    
+- Tri-State Buffer
+    
+- barrel shifter
+    
+- One’s counter
+    
+- Shift-register, D-FF, D-latch, SR-latch, LFSR
+    
+
+- Mealy, Moore machine of sequence detector
+    
+- 32-bit floating-point multiplier
+    
+- 24-bit sequential multiplier
+    
+- Pattern finder using convolution block with Avalon Master and Slave interface
+    
+- Gcd VHDL
+    
+- CPA, CSK, CLA, PPA
+    
+- Residue-7 VHDL
+    
+- VAM16 Multiplier 
+    
+- FIR filter 
+    
+- ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfbxbpUQ97Tlxw8_c0hroNOKdzPbPphF0HDZguBEEjBJDx1VyOVJdM05j6_m70Hu1awBTFkTxQ-O5sDkFexAg5oOwsLUz5ZKN5xJwt3Tyzz5EjUPtnxzXX49iskYIrClEAWrx2VOA?key=dl5wJ8gl7otU9RvoL_M3dw)
+    
+- Audio player with NIOS II using only software
+    
+- FIR filter with custom instruction
+    
+- FIR filter accelerator
+    
+- Quantized Autoencoder Verilog
+    
+- Quantized CNN verilog
+    
+- Binarized transformer and pruning

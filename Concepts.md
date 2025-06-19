@@ -1,62 +1,235 @@
-## Computer Boot Sequence:
+#### Computer Boot Sequence:
 1. Power on
-2. CPU reset vector: first value of PC(program counter) after reset pointing to BIOS/UEFI code 
-3. BIOS/UEFI : firmware code that is stored on BIOS chip (can be a ROM or Flash device)
+2. CPU reset vector: first value of PC(program counter) after reset, pointing to FSBL (First stage bootloader)
+3. FSBL example: BIOS/UEFI : firmware code that is stored on BIOS chip (can be a ROM or Flash device)
 	- POST (Power-On Self Test) is done in the BIOS/UEFI code 
-	
-![alt text](./figures/OS_Boot_1.png)
-![alt text](./figures/OS_Boot_2.png)
+4. ...
+---
+#### OS
+- tickless kernel
+- SECURE BOOT
+- DTS
+  - Interrupt Map Configuration Explanation
 
-SCURE BOOT
-FSBL
+- **Software Interrupt vs Syscall**
+- **MABI stands for "Machine ABI" (Application Binary Interface)**
+- **filesystems**
+  - RAM filesystem
+  - **primary partition vs logical drive**
+
+##### Linux
+- Unix - > multi-user OS
+- **fstb entry**
+- **Creating Soft Links Ubuntu**
 
 ---
+#### Compiler
+**Compiler vs interpreter vs JIT compiler**
+**C Standard library, newlib, glibc**
+- **volatile keyword do in C**
+  - useful when Interrupt + Compiler Optimization flags
+
+Build vs compile vs parser vs execution
+Newlib vs Linux
+GTEXT in Assembly
 - Callback vs calling a func within another function
-
-electromigration
-
-Solid-state: based on **semiconductor** materials
-
-**power network design** is the analysis and design of **on-chip** [conductor](https://en.wikipedia.org/wiki/Electrical_conductor "Electrical conductor") networks that distribute [electrical power](https://en.wikipedia.org/wiki/Electric_power "Electric power") on a chip.
-
-LDPC encoding and decoding
-
-Federated Learning
-
----
-
-- .vscode
-- .idea
-
-Tcl
-set_app_var vs set
-
-CLI (Command-line Interface):
-
-- .cmd
-
-- .bat
-
-- .sh
----
-LCD classes:
-- IPS
-- TFT
-- LDPC
---- 
+- **Software Debugger vs Hardware Debugger**
+- weak vs strong typing 
+- runtime vs compile time
 
 - if vs #ifndif
 
 - define vs const
 
+- identifier vs text
 
-Data Analysis Methods
+- superclass vs subclass
 
-Black holes
+---
+#### Git
+- Complete Repo Cloning --> with all previous commits
 
-Docker
+- "nightly release" --> automatically built and released every night (or at regular intervals, often daily)
 
-What type of frying pan is resilient to metal spoons?
+- GitLab
+
+- Dependabot
+
+---
+#### System Design
+
+- When designing, plan its test too.
+- Regression testing and verification is crucial before every commit. regression testing really matters and must be automatic. 
+- **sanity testing** is a **rapid** and **initial assessment** of the basic functionality of a software system.
+
+
+---
+Optimization Models:
+- White-box
+- Black-box
+- Heuristics
+
+----
+#### Tradtional ANN:
+
+- Federated Learning
+
+Quantization:
+
+- ReBNet
+
+- LSQ, LSQ+
+
+Optimizer vs Loss Func
+
+Attention mask
+
+Require_grad
+
+Pytorch vs Tensorflow
+
+Prune
+
+Topk    
+
+ANNS (Approximate Nearest Neighbor Search)
+
+Hyperdimensional Computing (HDC)
+
+latent text-to-image diffusion
+
+
+**Training LLM on FPGA - > the communication bottleneck in distributed training and inference on FPGAs - > sol of NVIDIA is NVlink**
+
+
+Weight/Input/Output/… stationary (An abstraction that helps a lot in mapping and DNN Reuse and analysis) ⇒ Weight/… Reuse: 
+
+- IF spatial tiling ⇒ Spatial Reuse : Reuse in the Network of PEs
+    
+- IF temporal tiling ⇒  Temporal Reuse: Reuse in memory Hierarchy (less upper memory access)
+
+- Tile comes from Mapping (not HW architecture).
+
+DNN DSE: Mapping and Architecture (Memory Hierarchy )
+- DOSA, CoSA, 
+- Timeloop and Accelergy (NVIDIA Tutorial)
+- LoMa Time
+- Nested Loop repersentation
+
+![alt_text](./figures/Pasted%20image%2020250616095304.png)
+
+##### LLM
+
+- Ollama does not work properly with external downloaded GGUF models (Ex. DeepSeek-R1-Distill-Qwen-7B-Q4_K_M.gguf from Huggingface) ⇒ zip .ollama folder
+    
+- Embeddings (Meaning & Positional, ...), Attention (Query - Key - Value), Feed Forward Network  
+    Visualizing transformers and attention | Talk for TNG Big Tech Day '24
+    
+- RAG vs CAG, agentic RAG
+    
+- LlamaIndex, Elastic Search
+    
+- Langchain, Ollama
+        
+- LLM Context size
+    
+- LLM chat GUI: streamlit, Gradio
+    
+- MCP, A2A
+- **dotenv (.env)**
+    
+- [https://github.com/NarimanN2/ollama-playground](https://github.com/NarimanN2/ollama-playground) →Very interesting and diverse for working with Ollama and good for beginners
+- **n8n** is not fully free and also its local version is very bad with online LLMs and hard to work with. And its online version just have a free trail and then priced.
+- [https://github.com/lfnovo/open-notebook](https://github.com/lfnovo/open-notebook) → Takes too much time with Ollama, streamlit, langchain, python, surrealdb, dockerized → Google NotebookLM is a lot faster but not very intelligent as I expected
+
+  
+
+###### RAG
+
+
+- document_loaders
+    
+- Ollama deepseek-r1 embedding is awful, or there is not embedding, or ...
+    
+- Vector Store: Vector Database(Chroma, qdrant) and InMemoryVectorStore
+    
+- Persistant Memory
+- **XP**: 
+	- localGPT-Vision is an end-to-end vision-based Retrieval-Augmented Generation (RAG) system 
+	- PrivateGPT is a service that wraps a set of AI RAG primitives in a comprehensive set of APIs providing a private, secure, customizable and easy to use GenAI development framework.
+	- - [https://github.com/pixegami/rag-tutorial-v2.git](https://github.com/pixegami/rag-tutorial-v2.git)
+
+
+
+Tip: Deepseek API and OpenAI API are not free but Google Gemini API is free for experimental models.
+**XP: Ollama local large models are very slow, but small models that are fast are not good at all. (for my computer). So I decided to use APIs but are too expensive compared to free use on their site. Then I decided to use Scrapers to automate but It is not applicable because of CAPTCHA and etc.**  
+##### web scraper, AI Web Scraper
+Selenium Tried to act like API for Deepseek using chat.deepseek in order to chat instead of me and return the response but it was not OK at all:
+problem1: did not work with firefox # Selenium geckodriver: profile missing: your firefox profile cannot be loaded
+problem2: worked with Chrome but could create a persistent profile
+
+--- 
+
+- GigaLib
+	- not free, but it has the latest papers even yesterday-published papers
+- FreeTube is not smooth and it is just for Desktop
+
+
+**Web2 vs Web3**
+
+**SPICE (Simulation Program with Integrated Circuit Emphasis) Berkeley, A industry standard tool in the  for circuit simulation.**
+
+
+---
+#### RISC-V
+- **PLIC in RISC-V, clint**
+- RISC-V compliance refers to the adherence and compatibility of a computer processor or system with the RISC-V instruction set architecture (ISA).
+---
+#### why async active-low reset ?
+
+- Design Standards of Many design and synthesis tools
+    
+- Synchronization: Asynchronous resets are often preferred because they can immediately reset the system regardless of the clock signal. This is crucial for initializing registers and bringing the system to a known state at power-up or during error recovery. A posedge reset, being synchronous, would require the reset signal to align with the clock edge, potentially delaying the reset action and complicating the design.
+    
+
+- Clock gating
+
+❌ Tcq​ **is not a function of how early or stable** the input data is before the clock edge.  
+✅ It **only depends on the internal characteristics** of the flip-flop and its operating environment.
+
+
+--- 
+- electromigration
+
+- Solid-state: based on **semiconductor** materials
+
+- **power network design** is the analysis and design of **on-chip** conductor networks that distribute electrical power on a chip.
+
+
+##### Camera
+
+- DCMI vs MIPI
+- The frame rate is controlled by adjusting the sensor's clock settings( PLL (Phase-Locked Loop) configuration), and exposure settings.
+
+
+
+- J-Link debug probe
+
+- SmartFusion is a family of microcontroller-based programmable logic devices (PLDs) developed by Microsemi, now part of Microchip Technology
+- Libre-SOC project
+- LDPC encoding and decoding
+
+LCD classes:
+- IPS
+- TFT
+- LDPC
+
+
+**quadrature decoder**
+LED Shared Cathode Explained
+
+---
+What type of frying pan is resilient to metal spoons ? Teflon
 
 Pot Materials:
 
@@ -67,52 +240,24 @@ Pot Materials:
 - Stainless steel
 
 - Cast iron
+---
 
-- Teflon
+- Unmanned Robots
+- SLAM (Simultaneous localization and mapping)
 
-
-
-
-Dependabot
-
-Error-prone
-
-Clock gating
-
-SLAM (Simultaneous localization and mapping)
-
-Unmanned Robots
-
-Adversarial
-
-Newlib vs Linux
-Unix - > multi-user OS
-
-superclass vs subclass
 
 Security Deposit vs Mortgage vs Rent
 
 Down payments vs Closing costs
 
-self-check mechanisms
-Automation, Modeling, Verification
-
-GitLab
-
-RISC-V compliance refers to the adherence and compatibility of a computer processor or system with the RISC-V instruction set architecture (ISA).
 
 degree conferral
 
 Director vs Coordinator
 
-Build vs compile vs parser vs execution
 
-YAML (YAML Ain't Markup Language) is a human-readable data serialization format. It is often used as an alternative to JSON or XML for configuration files, data serialization, and interchanging data between different systems.
-
-
-sandbox
-
-An **industry solution** refers to a comprehensive set of software, tools, and services specifically designed and tailored to meet the needs of a particular industry or sector.
+- sandbox
+- Docker vs Virtual Machines vs Kubernates
 
 ISO/IEC
 
@@ -121,19 +266,8 @@ ISO/IEC
 
 CRLF vs LF
 
-'with' statement:
 
-- unallocate resource if an exception occurs
-- '**enter**()'
-
-weak vs strong typing = type checking: runtime vs compile time
-
-identifier vs text
-
-
-
-
-Nvidia DLSS -> Use AI for upscaling(Frame Gen)
+- Nvidia DLSS -> Use AI for upscaling(Frame Gen)
 - Rendering
 	- Ray Tracing
 	- Scanline Rendering
@@ -154,17 +288,8 @@ free =>x open-source
 
 
 
-Seed : initialize the whole process of random no generation
+- Seed : initialize the whole process of random number sequence generation
 
-- sequence of random number
-
-
-
-
-
-
-
-Here is your content converted into clean and structured **Markdown** format:
 
 ---
 
@@ -182,7 +307,7 @@ $$
 
 *(in bytes/sec, GB/s, etc.)*
 
----
+
 
 ## 🧠 Key Variations by System
 
@@ -206,7 +331,7 @@ $$
 3200 \times 10^6 \times 8 \times 2 = 51.2 \, \text{GB/s}
 $$
 
----
+
 
 ### 2. Effective Bandwidth (Real-World Performance)
 
@@ -218,7 +343,7 @@ $$
 
 * Accounts for latency, protocol overheads (e.g., PCIe headers), and contention.
 
----
+
 
 ### 3. Network Bandwidth
 
@@ -231,36 +356,6 @@ $$
 * **Bit Rate**: Raw line speed (e.g., 100 Gbps Ethernet)
 * **Utilization**: Efficiency after protocol overhead (\~95% for large packets using TCP/IP)
 
----
-
-## 📝 Important Notes
-
-* **Units**: Typically in bytes/sec (B/s, GB/s) or bits/sec (bps, Gbps)
-* **Conversion**:
-
-  * 1 byte = 8 bits
-  * Example: 100 Gbps = 12.5 GB/s
-* **Parallelism**:
-
-  * Technologies like **HBM** stack multiple channels vertically for higher throughput.
-* **FPGA/Accelerators**:
-
-  * Bandwidth depends on interconnect:
-
-    * PCIe 4.0 x16 ≈ 32 GB/s
-    * HBM2 ≈ 256 GB/s per stack
-
----
-
-## 🔢 Example Calculation (HBM2 Memory)
-
-**HBM2 Stack**: 8 channels × 128-bit bus × 2 Gbps/pin
-
-$$
-2 \times 10^9 \times \left(\frac{128}{8}\right) \times 8 = 256 \, \text{GB/s}
-$$
-
----
 
 ## ⏱ Bandwidth vs. Latency
 
@@ -269,326 +364,46 @@ $$
 * ⚠ High bandwidth ≠ low latency
   *(e.g., GPUs have high bandwidth but may have higher latency than CPUs)*
 
----
-
-## 🛠 Tools to Measure Bandwidth
-
-* **Memory**:
-
-  * STREAM benchmark
-  * Intel Memory Latency Checker (mlc)
-* **FPGA**:
-
-  * ChipScope (Xilinx)
-  * SignalTap (Intel)
-* **Network**:
-
-  * `iperf`
-  * `ethr`
-
-
-
-
-
-# Programmable Tools to Create Digital Block Diagrams (Like Vivado Block Design)
-
-If you're looking for a programmable or scriptable tool to create digital block diagrams (like Vivado's block design) using code/API instead of a GUI, here are the best options:
 
 ---
+### code-based Digital Design Schematic Tools
+I want text-based tool (e.g. code-based) that creates blocks with ports and then connect these ports in a very smooth manner, just by writing connect this port to that port.
+Following Options:
 
-## 1. HDL-Based Tools (Generate Block Diagrams from Code)
-
-These tools allow you to describe hardware in HDL (VHDL/Verilog) and automatically generate block diagrams.
-
-### Vivado Tcl Scripting
-
-Vivado itself supports Tcl scripting to generate block designs programmatically.
-
-**Example:**
-
-```tcl
-create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
-create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
-connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins processing_system7_0/GPIO_I]
-````
-
-You can export a `.tcl` script from an existing Vivado block design and modify it.
-
----
-
-### Yosys + Graphviz (For Open-Source Synthesis & Visualization)
-
-Yosys (RTL synthesis tool) can generate dot files from Verilog, which can be rendered into block diagrams using Graphviz.
-
-**Example:**
-
-```bash
-yosys -p "read_verilog mydesign.v; synth; write_dot -view mydesign.dot"
-dot -Tpng mydesign.dot -o mydesign.png
-```
-
-Works well for combinational/sequential logic visualization.
+- **RTL schematic in Vivado** , Vivado Tcl Scripting
+	- the best connection process.
+	- blocks are not customizable and there must be a corresponding HDL src file for every block.
+- **schemdraw** 
+	- NOT smooth and automatic connection
+- Pyrtl
+- D3
+- Mermaid
+- WaveDrom 
+- Drawio 
+- Graphviz - dot language (Yosys + Graphviz)
+- SkunkWorks HDL Visualizer 
+- netlistsvg - verilog netlist to svg
+- NextPNR can visualize the design (mainly for placement/routing).
 
 ---
-
-### Verilog-to-Schematic Tools
-
-* **netlistsvg** – Renders Verilog netlists into interactive schematics.
-* **Icarus Verilog + GTKWave** – For waveform-based visualization.
-
----
-
-## 2. Python-Based Tools (Generate Diagrams Programmatically)
-
-If you want to generate block diagrams using Python, these libraries are useful:
-
-### PyRTL (Python Register Transfer Level)
-
-A Python library for digital design that can generate block diagrams.
-
-**Example:**
-
-```python
-import pyrtl
-a = pyrtl.Input(8, 'a')
-b = pyrtl.Input(8, 'b')
-sum = pyrtl.Output(8, 'sum')
-sum <<= a + b
-pyrtl.output_to_svg(pyrtl.working_block(), "adder.svg")  # Exports block diagram
-```
-
----
-
-### Graphviz (Python Wrapper for DOT Language)
-
-You can define digital blocks and connections in Python and render them.
-
-**Example:**
-
-```python
-from graphviz import Digraph
-dot = Digraph()
-dot.node('A', 'Register')
-dot.node('B', 'ALU')
-dot.edge('A', 'B', 'data[7:0]')
-dot.render('block_diagram.gv', view=True)  # Outputs PDF/PNG
-```
-
----
-
-### Mermaid.js (Via Python or Directly in Markdown)
-
-Text-based diagramming (works in VS Code, Jupyter, etc.).
-
-**Example:**
-
-```mermaid
-blockdiagram
-    A[Register] -->|data| B(ALU)
-    B --> C[Memory]
-```
-
----
-
-## 3. EDA Tools with API Support
-
-### KiCad (Python API for Schematic Generation)
-
-You can script KiCad schematics using Python.
-
-**Example:**
-
-```python
-import pcbnew
-sch = pcbnew.SCHEMATIC()
-sch.AddWire((0, 0), (10, 10))  # Programmatically add components/wires
-```
-
----
-
-### Magic VLSI (For Custom IC Layouts)
-
-Scriptable via Tcl for custom digital layouts.
-
----
-
-## 4. Custom Solutions (JSON/YAML → Diagram)
-
-If you need a custom flow, you can define your blocks in JSON/YAML and convert them to diagrams using:
-
-* **D3.js** – Interactive web-based diagrams
-* **Draw\.io (Diagrams.net)** – Auto-Layout (via XML/JSON)
-* **Python + Matplotlib/NetworkX** – For simple block graphs
-
----
-
-## 🏆 Best Choice?
-
-| Use Case                                | Best Tool             |
-| --------------------------------------- | --------------------- |
-| FPGA Block Design (Xilinx)              | Vivado Tcl Scripting  |
-| RTL → Diagram (Open-Source)             | Yosys + Graphviz      |
-| Python-Based Digital Design             | PyRTL                 |
-| General Block Diagrams (Code → SVG/PDF) | Graphviz (Python/DOT) |
-| Interactive Web Diagrams                | Mermaid.js / D3.js    |
-
-
-
-Graphviz - dot language 
-SkunkWorks HDL Visualizer 
-netlistsvg - verilog netlist to svg
-NextPNR can visualize the design (mainly for placement/routing).
-
-
-
-
-
-# web scraper, AI Web Scraper
-Selenium Tried to act like API for Deepseek using chat.deepseek in order to chat instead of me and return the response but it was not OK at all:
-problem1: did not work with firefox # Selenium geckodriver: profile missing: your firefox profile cannot be loaded
-problem2: worked with Chrome but could create a persistent profile
-
-
-
-
-
-Selenium vs AI web scraper?
-Here’s a detailed comparison between Selenium (a traditional browser automation tool) and an AI web scraper, highlighting their differences, strengths, and best use cases:
-
-1. Core Functionality
-Feature
-Selenium
-AI Web Scraper
-Primary Use
-Browser automation, testing, and basic scraping
-Intelligent data extraction with adaptive learning
-Dynamic Content
-Can render JavaScript-heavy pages
-Handles dynamic content + interprets it contextually
-Adaptability
-Requires manual updates if site structure changes
-Auto-adapts to layout/HTML changes using AI
-Data Interpretation
-Extracts raw data (needs manual parsing)
-Understands semantics (e.g., NLP for sentiment)
-Anti-Bot Evasion
-Limited (needs custom proxy/CAPTCHA solvers)
-Mimics human behavior to bypass blocks
-
-
-2. Strengths
-Selenium
-Precision: Ideal for sites with predictable, static structures.
-Control: Full browser interaction (clicks, form submissions).
-Free & Open-Source: No cost for basic use (Python/Java/C#).
-AI Web Scraper
-Adaptability: Learns and adjusts to website changes.
-Complex Data Extraction: Handles unstructured text, images, and videos.
-Efficiency: Reduces manual effort for large-scale scraping.
-
-3. Weaknesses
-Selenium
-AI Web Scraper
-Fragile (breaks if HTML changes)
-Higher computational cost
-No built-in AI/ML analysis
-Overkill for simple sites
-Easily detected as a bot
-Ethical/legal gray areas (e.g., GDPR)
-
-
-4. When to Use Which?
-Choose Selenium If:
-You need to interact with a website (logins, dropdowns, forms).
-The target site has a simple, unchanging structure.
-You’re on a tight budget (free frameworks available).
-Choose an AI Scraper If:
-The site uses heavy JavaScript/AJAX or frequently changes layout.
-You need to extract insights from unstructured data (e.g., reviews, tweets).
-You’re scraping at scale and need anti-blocking features.
-
-5. Hybrid Approach
-Many modern scrapers combine both! For example:
-Use Selenium to render pages and log in.
-Pass the HTML to an AI model (e.g., NLP for text analysis).
-Tools like Scrapy + Selenium + TensorFlow enable this.
-
-Popular Alternatives
-Selenium Alternatives: Playwright, Puppeteer (lighter but similar).
-AI Scraper Alternatives: Diffbot, Apify, Octoparse (low-code AI scrapers).
-
-Final Verdict
-For simple, interactive tasks → Selenium.
-For large-scale, adaptive scraping → AI Web Scraper.
-
-
-
-
-# Tiling in DNN DSE
-- Tile comes from Mapping (not HW architecture).
-
-What does tile mean in the context of DNN DSE?
-In the context of Deep Neural Network (DNN) Design Space Exploration (DSE), "tile" refers to a technique used to optimize computation and memory access by partitioning data (e.g., tensors, feature maps, or weight matrices) into smaller, manageable blocks or chunks. Tiling is crucial for improving performance, especially in hardware accelerators like GPUs, TPUs, or custom ASICs/FPGAs.
-
-Why Tiling is Used in DNN DSE:
-Memory Hierarchy Optimization
-Tiling helps exploit locality of reference by ensuring that frequently accessed data fits into faster memory levels (e.g., cache, registers, or shared memory).
-Reduces expensive off-chip DRAM accesses.
-Parallelism & Resource Utilization
-Enables efficient pipelining and parallel execution (e.g., in systolic arrays or SIMD architectures).
-Helps balance workload across compute units.
-Reducing Data Movement Overhead
-By processing smaller tiles, data transfers between memory and compute units are minimized.
-Handling Large Tensors
-DNNs often deal with massive tensors that don’t fit in on-chip memory. Tiling breaks them into smaller, processable units.
-Types of Tiling in DNNs:
-
-Loop Tiling (Temporal Tiling):
-Applied to nested loops in convolution or matrix multiplication (e.g., in GEMM operations).
-Example: Tiling loops over input channels, output channels, or image dimensions.
-
-Spatial Tiling:
-Partitioning feature maps or weight matrices spatially (e.g., splitting an image into patches).
-
-Channel Tiling:
-Splitting input/output channels to fit into limited on-chip memory.
-
-Example in Convolutional Layers:
-Suppose you have a large input feature map and a convolution kernel. Instead of processing the entire image at once, you tile it into smaller blocks (e.g., 8x8 tiles) and compute convolutions tile-by-tile, reusing weights efficiently.
-
-Trade-offs in DSE:
-Tile Size Selection: Larger tiles improve compute utilization but may increase memory pressure.
-Memory vs. Compute Bound: Tiling helps balance between memory bandwidth and compute throughput.
-Hardware Constraints: Tile sizes must align with accelerator parameters (e.g., SRAM size, register files).
-
-Conclusion:
-In DNN DSE, tiling is a key optimization strategy to improve throughput, energy efficiency, and latency by structuring computations to match hardware capabilities. The choice of tile size and partitioning scheme is often explored during DSE to find the best-performing configuration.
-
-
-
-
 
 # Endpoint vs API
 serverless or server-based API, Edge API
-Server-Based:
-# Your Express.js API running locally
-http://localhost:3000/api/users
 
+Server-Based:
+- Your Express.js API running locally
 
 Serverless:
-# Your AWS Lambda endpoint
-https://abc123.execute-api.us-west-2.amazonaws.com/prod/api
-
+- Your AWS Lambda endpoint
 
 Edge:
-# Your Cloudflare Worker
-https://your-app.workers.dev/api
+- Your Cloudflare Worker
 
 
 All three are "Web APIs", but with very different server architectures underneath!
-Google Cloud is generally not available for use in Iran, and individuals or entities in Iran are prohibited from accessing or using Google Cloud services.
+- Google Services (e.g. gemini, cloud, ...) are under sanctions because of Iran.
 
-
+---
 # DRAM
 
 - DIMM vs. SIMM
@@ -720,3 +535,43 @@ Yes, DRAM is slower than SRAM due to fundamental design differences rooted in **
 
 DRAM is slower than SRAM **not because of SRAM itself**, but due to fundamental differences in **circuit design, charge storage, and access mechanisms**. SRAM’s **flip-flop storage, direct access, and lack of refresh** make it inherently faster, whereas DRAM’s **capacitor-based storage, refresh cycles, and row activation overhead** introduce latency.
 
+---
+## malware & Attack Types
+
+| Feature / Type        | **Virus**                                  | **Trojan**                                       | **Hardware Trojan**                                  | **Side-Channel Attack**                                  |
+| --------------------- | ------------------------------------------ | ------------------------------------------------ | ---------------------------------------------------- | -------------------------------------------------------- |
+| **Definition**        | Malicious code that replicates and spreads | Malicious software disguised as legitimate       | Malicious circuitry added to hardware                | Attack using physical signals to extract information     |
+| **Infection method**  | Embeds in files, programs, or OS           | User is tricked into installing it               | Inserted during design/fabrication/supply chain      | Observes power, timing, EM, or cache behavior            |
+| **Replication**       | ✅ Yes                                      | ❌ No                                             | ❌ No                                                 | ❌ No                                                     |
+| **Activation**        | When infected file runs                    | When user runs the disguised program             | When a hidden condition is met in hardware           | When attacker measures physical side effects             |
+| **Primary target**    | Software                                   | Software                                         | Hardware (ICs, FPGAs, SoCs)                          | Any system (hardware or software) performing computation |
+| **Common payloads**   | File corruption, spreading to others       | Keylogging, backdoors, downloading other malware | Data leakage, logic tampering, kill switch           | Key extraction, PIN recovery, algorithm leakage          |
+| **Detection**         | Antivirus tools, file integrity checks     | Heuristic scanning, behavioral analysis          | Side-channel, layout inspection, formal verification | Power/timing analysis, signal monitoring                 |
+| **Stealth technique** | Hides in files or OS                       | Appears as useful software                       | Tiny logic blocks, triggered under rare conditions   | Exploits unintentional signals—hard to detect            |
+| **Risk level**        | 🔺 Moderate to High                        | 🔺 Moderate to High                              | 🔺🔺 High (especially in critical systems)           | 🔺🔺 High (especially in cryptographic contexts)         |
+
+- Error-prone
+- Adversarial attack
+
+---
+## Network (Necessary in Iran)
+
+| Feature       | Sockets                                           | HTTP                               | FTP                                   |
+| ------------- | ------------------------------------------------- | ---------------------------------- | ------------------------------------- |
+| Purpose       | General-purpose process-to-process communication  | Web data transfer                  | File transfer                         |
+| Level         | Low-level (networking)                            | Application-level                  | Application-level                     |
+| Protocol Type | Connection-oriented (TCP) or connectionless (UDP) | Connection-oriented                | Connection-oriented                   |
+| Usage         | Flexible, customizable                            | Web browsing, data retrieval       | File upload/download, file management |
+| Security      | Depends on implementation                         | Uses HTTPS for secure transmission | Uses encryption and authentication    |
+| Data Format   | Raw data, customizable                            | Text, HTML, images, videos, etc.   | Files                                 |
+| Common Ports  | TCP: 80, 443; UDP: 53, 123                        | TCP: 80, 443                       | TCP: 20 (data), 21 (control)          |
+
+vpn
+		1.Hide from ISP,..
+		2.Tunneling into a remote network
+
+- DNS Filter
+- Warp
+- fast and stable Network in Iran
+  - Warp with Irancell & Rightel : do not work 
+  - Irancell (Modem) is unstable and slow in Kashmar compared to IR-MCI

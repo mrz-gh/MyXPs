@@ -16,7 +16,7 @@
 	3. [👁️ Waveform Viewers](#wave-viewers)
 	   - [Closed-source](#closed-source)
 	   - [Open-source](#open-source)
-	1. [📘 Verilog / SystemVerilog Notes](#verilogsystemverilog-tips)
+	1. [📘 VHDL/Verilog / SystemVerilog Notes](#VHDL)
 	2. [Automation](#automation)
 3. [Hardware Concepts](#hardware-concepts)
    - [Bus Protocols](#bus-protocols)
@@ -43,6 +43,20 @@ IDE, EDA tools, Verilog, Productivity, Obsidian, second brain, FOSS, report writ
 - <https://github.com/riscv>
 - <https://github.com/uobdv/Design-Verification>
 - [systemverilog.io ](https://www.systemverilog.io/)
+
+**open-source gpu hardware implementation**
+https://www.youtube.com/watch?v=h9Z4oGN89MU
+
+CPU Scheduling
+https://www.youtube.com/watch?v=O2tV9q6784k
+
+fuse-soc
+```
+fusesoc library add e4tham_templates https://github.com/fusesoc/fusesoc-cores.git --sync-type=git
+fusesoc list-cores
+```
+
+
 
 # TOOLs 
 
@@ -113,7 +127,7 @@ IDE, EDA tools, Verilog, Productivity, Obsidian, second brain, FOSS, report writ
 ✅ **Best Industrial HDL with High Productivity**
 - **SpinalHDL**: Best mix of abstraction and RTL control, highly readable output, supports both Verilog and VHDL.
     
-
+---
 ### HDL simulators
 
 | Tool                     | SV-UVM Support | Mixed-HDL | Cracked / Open Source |
@@ -132,7 +146,7 @@ IDE, EDA tools, Verilog, Productivity, Obsidian, second brain, FOSS, report writ
 <https://www.intel.com/content/www/us/en/support/programmable/support-resources/design-software/os-support.html?wapkw=operating%20system%20support#tab-blade-3-4>
 
 - **Simulate VHDL by Verilator**: You can synthesize vhdl to a verilog netlist using ghdl - - synth argument which generates a synthesized netlist that you can simulate in verilator.
-
+---
 ## HDL Synthesizers
 
 | Synthesizer tool | Usage | Open-source |
@@ -143,18 +157,39 @@ IDE, EDA tools, Verilog, Productivity, Obsidian, second brain, FOSS, report writ
 | Intel Quartus Prime | **Intel** FPGA | NO |
 | Yosys | ASIC & FPGA | YES |
 
+
+- Siemens' Catapult HLS tool: latest 2024
+- Vitis HLS 
+
+--- 
 #### Wave Viewers
 
-##### closed source
-- ViVa
-- WaveView
-- AvanWaves
 ##### Open-source
 
+- GTKwave ✅
 - Gwave
-- GTKwave
 
-## Verilog/SystemVerilog Tips
+
+closed-source : ViVa, WaveView, AvanWaves
+
+---
+## VHDL/Verilog/SystemVerilog Tips
+
+
+- VHDL: IEEE 1076-2019
+- SV: IEEE 1800-2023
+- Verilog: IEEE 1364-2005
+- SVA
+
+- **In Verilog, === and its counterpart !== are used for 4-state logic comparisons**
+
+- do not use the following coding in Verilog:
+
+      define CHxCCR_make(n) \ wire [15:0] CHnCCR; ` assign CHnCCR = CH``n``PRE ? CH``n``CCR_shadow_q : CHnCCR_VAL;; ` assign GT_CHnO_o = CH``n``E ? (CHnP ^ CHnOREF_o) : 1'b0;; ` assign CHnCCIF_o = CH``n``CCIF;;
+
+- FOR vs WHILE vs LOOP vs GENERATE in VHDL
+- IF vs WHEN in VHDL
+- CASE vs WITH-SELECT in VHDL
 
 - `include vs package
 - Each module has to be defined just once using
@@ -196,6 +231,7 @@ IDE, EDA tools, Verilog, Productivity, Obsidian, second brain, FOSS, report writ
   - .emac or .el , .org, .md, .tcl, .ini, .f
 
 - in SV, there is no built-in function to get thread ID when using fork-join
+- **Yes, SystemVerilog functions can be synthesizable in Vivado, but there are some considerations**
 
 - **Virtual** means it is not associated with any particular datatype.
 
@@ -209,8 +245,23 @@ IDE, EDA tools, Verilog, Productivity, Obsidian, second brain, FOSS, report writ
 
 - PLI vs DPI Comparison
 
+- Python for RTL Verification: cocotb and pyuvm
+	- Ray Salemi's book
+
 ## Automation
 
+CLI tools > GUI tools
+- Tcl
+  - set_app_var vs set
+
+CLI (Command-line Interface):
+- .cmd
+- .bat
+- .sh
+
+self-check mechanisms
+Automation, Modeling, Verification
+- YAML vs JSON vs XML for configuration
 - **TCL** over **.do** files in QuestaSim/ModelSim
   - standalone TCL vs TCL/TK
 
@@ -225,7 +276,9 @@ IDE, EDA tools, Verilog, Productivity, Obsidian, second brain, FOSS, report writ
 # Hardware Concepts
 
 - **round-robin arbiter**
-- **sanity testing** is a **rapid** and **initial assessment** of the basic functionality of a software system.
+- CPU Prefetcher Improves Performance
+- **MMIO stands for Memory-Mapped Input/Output**
+
 
 ###### Bus protocols:
 
@@ -353,12 +406,34 @@ FPGA vendors: Intel, Xilinx, Microchip, ...
 ##### **Versal ACAP (Advanced Compute Acceleration Platform):**
 - Built on the foundation of Zynq, Versal integrates AI engines, DSP engines, and adaptable engines for next-generation compute-intensive workloads.
 
+
+
 ---
 
-
+- **PetaLinux** officially supports the entire Zynq-7000 series (from 7010 up to 7100).
+- **Vivado provides simulation models for the entire system including IPs**
 - The Xilinx SDK (Software Development Kit) was the integrated development environment (IDE) for software development targeting Xilinx devices ==> replaced by **Vitis** Unified Software Platform.
+[![](https://mermaid.ink/img/pako:eNp1kltrg0AQhf_KMs8mVaPxUigkMRehhUJKHqp9WOLULNFdWde2acx_78ZE6IXu0-6eb84cmDnCVmQIIeSSVjvyFN2mnOgzSTZMsZo8aLUgM1FWokZJYq5Qkwpr8s7UjqxZ2RSM71_IYHDXLpFjJ7Zkmqzu17ouw5fe8TcyS1bRfYeQAdmgZIXIbzb679-KKJnEZM5zxvGH9bQDzyFZoZMp0ZLFNb9O0VOzv9RSU280Ez0S_UVWV6NJ3EOLDpp_VEKqmsSPF6eruPyZmUyZqpVEWrYkThaPy0nvsurACKtCHC6dYq2AASXKkrJMj-R4JlNQOywxhVBfMyr3KaT8pDnaKLE-8C2ESjZogBRNvoPwlRa1fjVVpvtHjOpplT1SUf4sxPcnhEf4gNCyraHpefZoPA5Gvh84YwMOEPrO0LRsM_D8YOw7vhWcDPjsDMyh55qOb7tuYJuOZVq6IJfn1NcwyDOUM9FwBaHrGoAZU0I-XHatW7nTF6xQxnw?type=png)](https://mermaid.live/edit#pako:eNp1kltrg0AQhf_KMs8mVaPxUigkMRehhUJKHqp9WOLULNFdWde2acx_78ZE6IXu0-6eb84cmDnCVmQIIeSSVjvyFN2mnOgzSTZMsZo8aLUgM1FWokZJYq5Qkwpr8s7UjqxZ2RSM71_IYHDXLpFjJ7Zkmqzu17ouw5fe8TcyS1bRfYeQAdmgZIXIbzb679-KKJnEZM5zxvGH9bQDzyFZoZMp0ZLFNb9O0VOzv9RSU280Ez0S_UVWV6NJ3EOLDpp_VEKqmsSPF6eruPyZmUyZqpVEWrYkThaPy0nvsurACKtCHC6dYq2AASXKkrJMj-R4JlNQOywxhVBfMyr3KaT8pDnaKLE-8C2ESjZogBRNvoPwlRa1fjVVpvtHjOpplT1SUf4sxPcnhEf4gNCyraHpefZoPA5Gvh84YwMOEPrO0LRsM_D8YOw7vhWcDPjsDMyh55qOb7tuYJuOZVq6IJfn1NcwyDOUM9FwBaHrGoAZU0I-XHatW7nTF6xQxnw)
 
+graph TD;
 
+    A[Vitis Model Composer Integrates with Simulink] -->|Generates| B[HLS Code];
+
+    A -->|Generates| C[HDL Code - Verilog/VHDL];
+
+    A -->|Generates| D[AI Engine Code];
+
+    B -->|Compiles to| F[Vitis HLS];
+
+    C -->|Compiles to| G[Vivado];
+
+    D -->|Compiles to| H[Vitis AI];
+
+    F -->|Exports IP to| G;
+
+    G -->|Generates Bitstream| I[FPGA];
+
+    H -->|Deploys to| I;
 # Material Technologies
 
 | Technology                     | First Principle(s)                                                                                                                                                                                                                                                     | Key Advantage(s) Derived from Principle(s)                                                                                                                                                                                                                                                                                                                                               | Key Limitation(s) Derived from Principle(s)                                                                                                                                                                                                                                                                                                                                     | Best Applications (Deduced from Principles)                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -385,5 +460,60 @@ The best application for each technology stems directly from its underlying phys
     
 
 The future likely involves heterogeneous computing, where systems integrate multiple technologies (e.g., a CMOS CPU, Non-Von Neumann AI accelerators, Photonic interconnects, and perhaps access to Quantum resources) to leverage the best tool for each specific job.
+
+
+**
+
+Digital has deterministic output 
+
+Quantum and Analog also has deterministic evolution but Quantum has probabilistic output (mathematically) and Analog is sensitive to noise (technology - driven issue). 
+
+Mathematically, fundamental of analog computing is addition and multiplication and continuous functions of real number (in extension complex numbers). 
+
+fundamental of Quantum is good for Linear algebra of complex numbers (or real numbers) mathematically. 
+
+Digital is the best for logical and symbolic and rule-based math like branches, FSMs, bit manipulation of Integer and Finite sets of numbers. 
+
+- Addition and multiplication of Finite sets of number also is best for analog because the addition and multiplication are the fundamental of analog on real numbers which include integer and finite sets of numbers. Or, analog computing is the best for addition and multiplication which are the fundamental of linear algebra but quantum is better because it is the fundamental operations of it. 
+    
+
+  
+
+Mathematical Summary
+
+  
+
+A system requires more digitalness when it depends on:
+
+  
+
+Discrete sets: 
+
+  
+
+Finite structures: FSMs, trees, graphs
+
+  
+
+Symbolic logic: predicates, terms, rewrite rules
+
+  
+
+Exact computation: no real-number approximations
+
+  
+
+Deterministic semantics: predictable rule application
+
+  
+**
+
+HW is physical and takes space. Flexibility increases HW area, and if you idealy switch between configurations without no overhead, the routing of wires because of large area and the fact that the HW is fixed at space, its speed gets worse which an abstract fact, that is a reason for ASIC is better that FPGA in terms of speed. 
+
+  
+
+Why CPU is awful in AI, because CPU is general purpose and works on few data (because it also handles dependencies of data) in its pipeline, and regsiter them and then compute next operations and so on, which this takes lots of cycles, but GPU take advantage of independent vectors and compute in parallel ( which is mathematical not technological)
+
+**
 
 
