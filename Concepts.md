@@ -1,3 +1,7 @@
+1. Computer Boot Sequence
+2. OS
+3. 
+
 #### Computer Boot Sequence:
 1. Power on
 2. CPU reset vector: first value of PC(program counter) after reset, pointing to FSBL (First stage bootloader)
