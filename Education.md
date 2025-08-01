@@ -13,25 +13,23 @@
 
 - research is **wide** =>**making a decision** is so tough and frustrating
 
-
-
 ## UoT Digital Professors
 
 ستاره دان، صفری، افضلی، علیزاده، نوابی، معصومی
 
 تز ارشد رو میشه تا ترم 6 تمدید کرد ولی ترم 6 سخت گیری داره یا  پولیه و ترم 7 نیز کاملا حذف شد برای ارشد.
 
+### Dr.Safari
 
-
-### Safari
 - SNN (Mapping, HLS of SNNs)
-- Distributed NN on *parallela board*. 
-- adv: Projects are clear and specific. 
+- Distributed NN on *parallela board*.
+- adv: Projects are clear and specific.
 
+### Dr. Vahdat
 
-### Vahdat
 - IMC using emerging technology is the intersection of Physics, Digital, Algorithm, Math,...
-- disadv: Projects are not specific or clear 
+- disadv: Projects are not specific or clear
 
-### Dr. Salehi 
-- On-chip training of Neural Nets 
+### Dr. Salehi
+
+- On-chip training of Neural Nets
