@@ -7,7 +7,7 @@
 
 ## Overview (WHY)
 
-Sharing What I've Learned 
+Sharing What I've Learned
 
 ## Repo Guide
 
@@ -19,5 +19,6 @@ Sharing What I've Learned
 
 - [Computing Hardware Tips](HardwareTechnicalTips.md)
 
+### Keywords
 
-
+IDE, EDA tools, Verilog, Productivity, Obsidian, second brain, FOSS, report writing, Hardware coding, digital hardware, von Neuman, non-von- Neuman computing, Quantum computing, computers, PC, video game, FPGA, Neuromorphic computing, AI hardware, LLM provider, LLM free api, LLM free,
